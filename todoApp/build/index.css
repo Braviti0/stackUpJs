@@ -1,0 +1,120 @@
+#header {
+  padding: 20px;
+  text-align: center;
+  background-color: #1abc9c;
+  height: 10vh;
+}
+#underHeader {
+  display: flex;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: seagreen;
+  height: 90vh;
+  width: 20%;
+}
+
+#sidebar div {
+  flex-grow: 1;
+}
+
+#sidebar button {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#createTaskButton {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#deleteTaskButton {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+#updateTaskButton {
+  background-color: #008CBA; /* Blue */
+  color: white;
+}
+
+#readCreatedTasksButton {
+  background-color: #e7e7e7; /* Light Gray */
+  color: black;
+}
+
+
+#main {
+  padding: 20px;
+  background-color: skyblue;
+  height: 90vh;
+  width: 80%;
+}
+
+
+
+#updateTaskForm,
+#createTaskForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#updateTaskForm label,
+#createTaskForm label {
+  margin-bottom: 0.5em;
+}
+
+#updateTaskForm input[type="text"],
+#createTaskForm input[type="text"],
+#updateTaskForm select,
+#createTaskForm select {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+#updateTaskForm input[type="submit"],
+#createTaskForm input[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+#updateTaskForm input[type="submit"]:hover,
+#createTaskForm input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#confirmDelete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#confirmDelete h2 {
+  margin-bottom: 1em;
+}
+
+#confirmDelete button {
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+#confirmDelete #yesDelete {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+#confirmDelete #noDelete {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
