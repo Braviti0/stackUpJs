@@ -14,7 +14,7 @@
   padding: 20px;
   background-color: seagreen;
   height: 90vh;
-  width: 20%;
+  width: 10%;
 }
 
 #sidebar div {
@@ -52,69 +52,89 @@
   padding: 20px;
   background-color: skyblue;
   height: 90vh;
-  width: 80%;
+  width: 90%;
+}
+
+/* Path: index.js */
+/* styling for the task contaners */
+/* styling for mainTaskContainer you want taskContainers side by side */
+.mainTaskContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
+.taskContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
 
-#updateTaskForm,
+/* styling for the task buttons */
+.taskButton {
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+/* styling for the task state */
+.taskState {
+  border-radius: 5px;
+  background-color: gray;
+  flex-grow: 1;
+  width: 95%;
+  text-align: center;
+}
+
+/* styling for members of createTaskForm
+        <h2 id="createTaskTitle">Over here You can create a new task which you will update the progress later</h2>
+        <form id="createTaskForm" onSubmit="event.preventDefault(); 
+                                        const taskName = document.getElementById('taskName').value;
+                                        const taskDescription = document.getElementById('taskDescription').value;
+                                        createTask(taskName, taskDescription);">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" required>
+            <br>
+            <label for="taskDescription">Task Description:</label>
+            <textarea type="text" id="taskDescription" required></textarea>
+            <br>
+            <button type="submit">Create Task</button>
+        </form>
+*/
+#createTaskTitle {
+  text-align: center;
+  padding: 10px;
+}
+
 #createTaskForm {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-#updateTaskForm label,
-#createTaskForm label {
-  margin-bottom: 0.5em;
-}
-
-#updateTaskForm input[type="text"],
-#createTaskForm input[type="text"],
-#updateTaskForm select,
-#createTaskForm select {
-  margin-bottom: 1em;
-  padding: 0.5em;
-}
-
-#updateTaskForm input[type="submit"],
-#createTaskForm input[type="submit"] {
-  background-color: #4CAF50; /* Green */
-  color: white;
-  padding: 1em;
-  border: none;
-  cursor: pointer;
-}
-
-#updateTaskForm input[type="submit"]:hover,
-#createTaskForm input[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-#confirmDelete {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+}
+
+#createTaskForm input {
   width: 100%;
+  padding: 10px;
+  margin: 5px;
+  box-sizing: border-box;
 }
 
-#confirmDelete h2 {
-  margin-bottom: 1em;
-}
-
-#confirmDelete button {
-  margin-top: 1em;
-  padding: 0.5em;
+#createTaskForm textarea {
   width: 100%;
+  padding: 10px;
+  margin: 5px;
+  box-sizing: border-box;
 }
 
-#confirmDelete #yesDelete {
-  background-color: #f44336; /* Red */
-  color: white;
+#createTaskForm button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  box-sizing: border-box;
+  background-color: gold;
 }
 
-#confirmDelete #noDelete {
-  background-color: #4CAF50; /* Green */
-  color: white;
-}
